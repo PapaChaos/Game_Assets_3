@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryItem : MonoBehaviour
 {
 	public Texture2D InventoryImage;
+	public string InventoryItemName;
     // Start is called before the first frame update
     void Start()
     {
