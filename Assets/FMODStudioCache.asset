@@ -1,0 +1,394 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8539574325009010222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: E:\Sounds_Fmod_etc\GA3_Sounds\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636940814116460246
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1410
+  Exists: 1
+--- !u!114 &-8420688159371161298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Electronics, Radio Static, Lost Signal 1 SND33139
+  m_EditorClassIdentifier: 
+  Path: event:/Electronics, Radio Static, Lost Signal 1 SND33139
+  guid: d100a98d4cf28d44924731a87a01b765
+  Banks:
+  - {fileID: 4967100173085060000}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1.8000001
+  MaxDistance: 8
+  Length: 11200
+--- !u!114 &-7359810273646172162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/pc_noises
+  m_EditorClassIdentifier: 
+  Path: event:/pc_noises
+  guid: 3104964c2eff7c48b865a7947e8d6cb5
+  Banks:
+  - {fileID: 4967100173085060000}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 10
+  Length: 23664
+--- !u!114 &-7249735803599429731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Machinery, Rexon Machine, Fast To Slow Speed SND9730
+  m_EditorClassIdentifier: 
+  Path: event:/Machinery, Rexon Machine, Fast To Slow Speed SND9730
+  guid: 790fdd6ec51f0c43939af84074add0c9
+  Banks:
+  - {fileID: 4967100173085060000}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 4
+  MaxDistance: 6
+  Length: 2040
+--- !u!114 &-6562883380835149247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Engine room
+  m_EditorClassIdentifier: 
+  Path: event:/Engine room
+  guid: fb944b237f2d8b41acaf90352e8b5320
+  Banks:
+  - {fileID: 4967100173085060000}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 5.8
+  Length: 9557
+--- !u!114 &-4536613642637484353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/air_vent_plant room
+  m_EditorClassIdentifier: 
+  Path: event:/air_vent_plant room
+  guid: 3a48564b86644645ba7dce5cb44634e2
+  Banks:
+  - {fileID: 4967100173085060000}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 10
+  MaxDistance: 15
+  Length: 3940
+--- !u!114 &-3093187784558788050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Medical, Heart Rate Monitor 2 SND30797
+  m_EditorClassIdentifier: 
+  Path: event:/Medical, Heart Rate Monitor 2 SND30797
+  guid: 043c6a7b7a9c0348abb9874ecb9fea06
+  Banks:
+  - {fileID: 4967100173085060000}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 3.8
+  Length: 2997
+--- !u!114 &-2813080998258085673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambiance
+  m_EditorClassIdentifier: 
+  Path: event:/ambiance
+  guid: b06a88030cb9bb4cbc33982bbaf1134e
+  Banks:
+  - {fileID: 4967100173085060000}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 95
+  Length: 6034
+--- !u!114 &-1056618098601499477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Gas Leak, Loop 2 SND5851
+  m_EditorClassIdentifier: 
+  Path: event:/Gas Leak, Loop 2 SND5851
+  guid: acac44cfd861b945bfb9975c02b9e045
+  Banks:
+  - {fileID: 4967100173085060000}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 7
+  Length: 2296
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -8539574325009010222}
+  - {fileID: 4967100173085060000}
+  EditorEvents:
+  - {fileID: -7359810273646172162}
+  - {fileID: -2813080998258085673}
+  - {fileID: 2433308163562870970}
+  - {fileID: 7872776487802595054}
+  - {fileID: -8420688159371161298}
+  - {fileID: -4536613642637484353}
+  - {fileID: -3093187784558788050}
+  - {fileID: -7249735803599429731}
+  - {fileID: 6633213051971976768}
+  - {fileID: 6002137495342940272}
+  - {fileID: -6562883380835149247}
+  - {fileID: -1056618098601499477}
+  MasterBanks:
+  - {fileID: 4967100173085060000}
+  StringsBanks:
+  - {fileID: -8539574325009010222}
+  stringsBankWriteTime: 636940814116460246
+  cacheVersion: 3
+--- !u!114 &1394640696424587731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/pc_front of the ship
+  m_EditorClassIdentifier: 
+  Path: event:/pc_front of the ship
+  guid: cc14a6e65a110a4b927cbab17d95823e
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 2.6000001
+  MaxDistance: 5
+  Length: 2088
+--- !u!114 &2433308163562870970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Snoring_1
+  m_EditorClassIdentifier: 
+  Path: event:/Snoring_1
+  guid: 09bcec15d761664c9cf1a54a3e4f22c7
+  Banks:
+  - {fileID: 4967100173085060000}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 2.6000001
+  MaxDistance: 7
+  Length: 4000
+--- !u!114 &4967100173085060000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: E:\Sounds_Fmod_etc\GA3_Sounds\Build\Desktop\Master Bank.bank
+  lastModified: 636940814116400191
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1114880
+  Exists: 1
+--- !u!114 &5426909379144253284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/space_door_Open&Close
+  m_EditorClassIdentifier: 
+  Path: event:/space_door_Open&Close
+  guid: 65dd5a08dc45bb458cd6a4926a674e91
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 5
+  Length: 1508
+--- !u!114 &6002137495342940272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/pc_noise_2
+  m_EditorClassIdentifier: 
+  Path: event:/pc_noise_2
+  guid: cc14a6e65a110a4b927cbab17d95823e
+  Banks:
+  - {fileID: 4967100173085060000}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 2.6000001
+  MaxDistance: 5
+  Length: 2088
+--- !u!114 &6633213051971976768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sci-Fi, Spacecraft, Engine Room Ambience SND32574
+  m_EditorClassIdentifier: 
+  Path: event:/Sci-Fi, Spacecraft, Engine Room Ambience SND32574
+  guid: 38781befd015d548bb6f1f44f728eae2
+  Banks:
+  - {fileID: 4967100173085060000}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11657
+--- !u!114 &7872776487802595054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Space_door_Open&Close
+  m_EditorClassIdentifier: 
+  Path: event:/Space_door_Open&Close
+  guid: 65dd5a08dc45bb458cd6a4926a674e91
+  Banks:
+  - {fileID: 4967100173085060000}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 5
+  Length: 1508
