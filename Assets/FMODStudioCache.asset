@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: bank:/Master Bank.strings.bank
   m_EditorClassIdentifier: 
   Path: E:\Sounds_Fmod_etc\GA3_Sounds\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636940814116460246
+  lastModified: 636941603889891950
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1410
+    Value: 1312
   Exists: 1
 --- !u!114 &-8420688159371161298
 MonoBehaviour:
@@ -111,6 +111,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 5.8
   Length: 9557
+--- !u!114 &-5966152941503872498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Medical_machine
+  m_EditorClassIdentifier: 
+  Path: event:/Medical_machine
+  guid: 790fdd6ec51f0c43939af84074add0c9
+  Banks:
+  - {fileID: 4967100173085060000}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 4
+  MaxDistance: 6
+  Length: 2040
 --- !u!114 &-4536613642637484353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +226,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 7
   Length: 2296
+--- !u!114 &-632162935238479040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/prop_battery
+  m_EditorClassIdentifier: 
+  Path: event:/prop_battery
+  guid: fb944b237f2d8b41acaf90352e8b5320
+  Banks:
+  - {fileID: 4967100173085060000}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 5.8
+  Length: 9557
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,16 +272,15 @@ MonoBehaviour:
   - {fileID: -8420688159371161298}
   - {fileID: -4536613642637484353}
   - {fileID: -3093187784558788050}
-  - {fileID: -7249735803599429731}
   - {fileID: 6633213051971976768}
   - {fileID: 6002137495342940272}
-  - {fileID: -6562883380835149247}
-  - {fileID: -1056618098601499477}
+  - {fileID: -5966152941503872498}
+  - {fileID: -632162935238479040}
   MasterBanks:
   - {fileID: 4967100173085060000}
   StringsBanks:
   - {fileID: -8539574325009010222}
-  stringsBankWriteTime: 636940814116460246
+  stringsBankWriteTime: 636941603889891950
   cacheVersion: 3
 --- !u!114 &1394640696424587731
 MonoBehaviour:
@@ -295,11 +340,11 @@ MonoBehaviour:
   m_Name: bank:/Master Bank.bank
   m_EditorClassIdentifier: 
   Path: E:\Sounds_Fmod_etc\GA3_Sounds\Build\Desktop\Master Bank.bank
-  lastModified: 636940814116400191
+  lastModified: 636941603889841822
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1114880
+    Value: 1084416
   Exists: 1
 --- !u!114 &5426909379144253284
 MonoBehaviour:
