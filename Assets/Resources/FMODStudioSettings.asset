@@ -16,7 +16,7 @@ MonoBehaviour:
   HasPlatforms: 0
   sourceProjectPath: ounds.fspromod_etc\GA3_Sounds\GA3_Sounds.fspro
   SourceProjectPathUnformatted: ounds.fspromod_etc\GA3_Sounds\GA3_Sounds.fspro
-  SourceBankPathUnformatted: Fmod_sounds\GA_3_Sounds\Build\Desktop
+  SourceBankPathUnformatted: E:\GA_3_Sounds\Build\Desktop
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -61,5 +61,6 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master Bank
-  Banks: []
+  Banks:
+  - GA3_audio
   LiveUpdatePort: 9264
