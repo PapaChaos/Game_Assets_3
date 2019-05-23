@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{ebb36113-2141-46c6-b747-8b7cf69fcf8a}">
+        <property name="assetPath">
+            <value>Medical, Heart Rate Monitor 2 SND30797.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>96</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>2.9974895833333335</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{acb4889f-f2fb-415a-83cb-1940cccd1d95}</destination>
+        </relationship>
+    </object>
+</objects>

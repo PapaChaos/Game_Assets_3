@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{f44c68bf-8b2f-450c-b2d1-3f77670036f7}">
+        <property name="assetPath">
+            <value>Sci-Fi, Spacecraft, Engine Room Ambience SND32574 3.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>96</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>9.5574375000000007</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{acb4889f-f2fb-415a-83cb-1940cccd1d95}</destination>
+        </relationship>
+    </object>
+</objects>
