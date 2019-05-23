@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: E:\Sounds_Fmod_etc\GA3_Sounds\GA3_Sounds.fspro
-  SourceProjectPathUnformatted: E:\Sounds_Fmod_etc\GA3_Sounds\GA3_Sounds.fspro
-  SourceBankPathUnformatted: E:\Sounds_Fmod_etc\GA3_Sounds\Build
+  sourceProjectPath: ounds.fspromod_etc\GA3_Sounds\GA3_Sounds.fspro
+  SourceProjectPathUnformatted: ounds.fspromod_etc\GA3_Sounds\GA3_Sounds.fspro
+  SourceBankPathUnformatted: ounds.fspromod_etc\GA3_Sounds\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
