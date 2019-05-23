@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraChange : MonoBehaviour
 {
 	public Camera Ref_camera;
+	public bool overlapActivateDialog;
 
 	public bool drawDebugBox = true;
 
@@ -13,6 +14,13 @@ public class CameraChange : MonoBehaviour
 		if (other.GetComponent<PlayerMovement>())
 		{
 			other.GetComponent<PlayerMovement>().ChangeCameraView(Ref_camera);
+			if (overlapActivateDialog)
+			{
+				Ref_camera.GetComponent<DialogSystem>().startDialog(0);
+				other.GetComponent<PlayerMovement>().hud.HudChange(2);
+				overlapActivateDialog = false;
+
+			}
 		}
 	}
 	// Draws the Light bulb icon at position of the object.

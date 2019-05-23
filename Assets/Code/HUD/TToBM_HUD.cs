@@ -5,31 +5,33 @@ using UnityEngine.UI;
 
 public class TToBM_HUD : MonoBehaviour
 {
-	public Text CameraName;
-	public Text interactionText;
+	public Text CameraName, interactionText, DateandTimeText, dialogText;
 	public int[] DaysPerMonth;
-	public int Day =1;
-	public int Month =1;
-	public int Year = 2459;
-	public int Hour = 12;
-	public int Minute = 2;
-	public int Second = 1;
-	public Text DateandTimeText;
-
-	public GameObject InventoryButton;
-	public GameObject InventoryWindow;
+	public int Day =1, Month = 1, Year = 2459, Hour = 12, Minute = 2, Second = 1;
+	public GameObject InventoryButton, InventoryWindow, InventoryContent;
 	public bool Open = false;
+	public DialogSystem curActiveDialog;
+	public PlayerMovement player;
+	public bool startingDialog;
+
+
 	public void Start()
 
 	{
-		InvokeRepeating("updateGameTime", 0, 1.0f);
+		if (!startingDialog)
+		{
+			dialogText.enabled = false;
+			InvokeRepeating("updateGameTime", 0, 1.0f);
+		}
+		else
+		{
+			dialogText.enabled = true;
+			curActiveDialog.startDialog(0);
+
+		}
+
 	}
-	public void Inventory(bool Opening)
-	{
-		Open = Opening;
-		InventoryWindow.SetActive(Opening);
-		InventoryButton.SetActive(!Opening);
-	}
+
 	public void ChangeCameraName(string name)
 	{
 		CameraName.text = name;
@@ -38,7 +40,38 @@ public class TToBM_HUD : MonoBehaviour
 	{
 		interactionText.text = text;
 	}
-	
+
+
+	public void HudChange(int hudtype)
+	{
+		if (hudtype == 0)//Standard Camera
+		{
+			player.canMove = true;
+			dialogText.enabled = false;
+		}
+		else if (hudtype == 1)//Inventory
+		{
+
+		}
+		else if (hudtype == 2)//Dialog
+		{
+			player.canMove = false;
+			Inventory(false);
+			player.animator.SetInteger("Interaction", 0);
+			dialogText.enabled = true; 
+		}
+	}
+
+
+	public void Inventory(bool Opening)
+	{
+		Open = Opening;
+		InventoryWindow.SetActive(Opening);
+		InventoryButton.SetActive(!Opening);
+	}
+
+
+
 	void updateGameTime()
 	{
 		if(Second < 59)

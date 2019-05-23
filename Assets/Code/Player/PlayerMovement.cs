@@ -11,61 +11,114 @@ public class PlayerMovement : MonoBehaviour
 	NavMeshAgent agent;
 	public GameObject interacting;
 	public Camera ActiveCamera;
-
+	public GameObject MainSkeleton;
+	public Animator animator;
+	public bool canMove = true;
+	public bool engCode, hangarCode;
 	void Start()
 	{
+		hud.player = this;
 		agent = GetComponent<NavMeshAgent>();
+		if(!hud.startingDialog)
 		ChangeCameraView(ActiveCamera);
 	}
 
 	void Update()
 	{
-		if (!hud.Open)
+		if (canMove)
 		{
-			Time.timeScale = 1;
+			float velocity = agent.velocity.magnitude / agent.speed;
 
-			if (!EventSystem.current.IsPointerOverGameObject())
+			if (velocity > 0)
 			{
-				RaycastHit hit;
-				if (Physics.Raycast(ActiveCamera.ScreenPointToRay(Input.mousePosition), out hit, 2000))
+				animator.SetInteger("Interaction", 1);
+				animator.SetFloat("movementSpeed", velocity);
+			}
+			if (velocity == 0)
+			{
+				animator.SetInteger("Interaction", 0);
+			}
+			if (!hud.Open)
+			{
+				Time.timeScale = 1;
+
+				if (!EventSystem.current.IsPointerOverGameObject())
 				{
-					if (hit.transform.gameObject.GetComponent<InteractableWorldObject>())
-						hud.ChangeInteractionText(hit.transform.gameObject.GetComponent<InteractableWorldObject>().interactionText());
-					else
-					{
-						hud.ChangeInteractionText("Walk to ");
-					}
-				}
-				if (Input.GetMouseButtonDown(0))
-				{
-					interacting = null;
-					//RaycastHit hit;
-					print("Raycasting");
+					RaycastHit hit;
 					if (Physics.Raycast(ActiveCamera.ScreenPointToRay(Input.mousePosition), out hit, 2000))
 					{
-						agent.destination = hit.point;
-						print(hit.point);
 						if (hit.transform.gameObject.GetComponent<InteractableWorldObject>())
+							hud.ChangeInteractionText(hit.transform.gameObject.GetComponent<InteractableWorldObject>().interactionText());
+						else
 						{
-							interacting = hit.transform.gameObject;
-							//print(Vector3.Distance(interacting.transform.position, transform.position));
-
+							hud.ChangeInteractionText("Walk to ");
 						}
 					}
+					if (Input.GetMouseButtonDown(0))
+					{
+						interacting = null;
+						//print("Raycasting");
+						if (Physics.Raycast(ActiveCamera.ScreenPointToRay(Input.mousePosition), out hit, 2000))
+						{
+							agent.destination = hit.point;
 
+							print("Raycasting" + hit.point);
+							if (hit.transform.gameObject.GetComponent<InteractableWorldObject>())
+							{
+								interacting = hit.transform.gameObject;
+							}
+						}
+
+					}
 				}
-			}
-			if (interacting && Vector3.Distance(interacting.transform.position, transform.position) < 3f)
-			{
-				interacting.GetComponent<InteractableWorldObject>().Interact();
-				interacting = null;
-				hud.ChangeInteractionText("");
-			}
-		}
-		else
-			Time.timeScale = 0;
-    }
+				if (interacting)
+				{
+					if (interacting.GetComponent<InteractableWorldObject>().InteractableRange == 0)
+					{
+						if (Vector3.Distance(interacting.transform.position, transform.position) < 1f)
+						{
 
+
+							interacting.GetComponent<InteractableWorldObject>().interactor = this;
+							interacting.GetComponent<InteractableWorldObject>().Interact();
+							interacting = null;
+							hud.ChangeInteractionText("");
+							agent.destination = agent.transform.position;
+						}
+					}
+					else if (interacting.GetComponent<InteractableWorldObject>().InteractableRange > 0)
+					{
+						if (Vector3.Distance(interacting.transform.position, transform.position) < interacting.GetComponent<InteractableWorldObject>().InteractableRange)
+						{
+
+
+							interacting.GetComponent<InteractableWorldObject>().interactor = this;
+							interacting.GetComponent<InteractableWorldObject>().Interact();
+							interacting = null;
+							hud.ChangeInteractionText("");
+							agent.destination = agent.transform.position;
+						}
+					}
+				}
+
+			}
+			else
+				Time.timeScale = 0;
+		}
+
+	}
+	public void InteractionAnimation(int action, float reactiv)
+	{
+		canMove = false;
+		animator.SetInteger("Interaction", action);
+		StartCoroutine(reactivateMovement(reactiv));
+
+	}
+	IEnumerator reactivateMovement(float timer)
+	{
+		yield return new WaitForSeconds(timer);
+		canMove = true;
+	}
 	public void ChangeCameraView(Camera cam)
 	{
 		ActiveCamera.enabled = false;
