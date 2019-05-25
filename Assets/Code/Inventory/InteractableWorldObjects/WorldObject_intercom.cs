@@ -13,7 +13,7 @@ public class WorldObject_intercom : InteractableWorldObject
 		{
 			interactor.ChangeCameraView(ds.GetComponent<Camera>());
 			interactor.hud.HudChange(2);
-			ds.startDialog(0);
+			ds.startDialog();
 		}
 	}
 }

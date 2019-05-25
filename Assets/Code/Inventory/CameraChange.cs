@@ -16,7 +16,7 @@ public class CameraChange : MonoBehaviour
 			other.GetComponent<PlayerMovement>().ChangeCameraView(Ref_camera);
 			if (overlapActivateDialog)
 			{
-				Ref_camera.GetComponent<DialogSystem>().startDialog(0);
+				Ref_camera.GetComponent<DialogSystem>().startDialog();
 				other.GetComponent<PlayerMovement>().hud.HudChange(2);
 				overlapActivateDialog = false;
 

@@ -20,7 +20,7 @@ public class WorldObject_Battery : InteractableWorldObject
 	IEnumerator removeWorldItem()
 	{
 		yield return new WaitForSeconds(1.5f);
-		batteryDialog.startDialog(0);
+		batteryDialog.startDialog();
 		Destroy(gameObject);
 
 	}

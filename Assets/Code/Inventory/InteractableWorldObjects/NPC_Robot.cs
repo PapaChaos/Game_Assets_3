@@ -18,7 +18,7 @@ public class NPC_Robot : InteractableWorldObject
 		{
 		interactor.hud.curActiveDialog = gameObject.GetComponent<DialogSystem>();
 		gameObject.GetComponent<DialogSystem>().player = interactor;
-		gameObject.GetComponent<DialogSystem>().startDialog(0);
+		gameObject.GetComponent<DialogSystem>().startDialog();
 		interactor.hud.HudChange(2);
 		interactor.engCode = true;
 		interactor.hangarCode = true;
@@ -40,6 +40,15 @@ public class NPC_Robot : InteractableWorldObject
 					broken = true;
 					Quaternion someRotation = Quaternion.Euler(-0.7544f, 0.0027f, 25.401f);
 					Instantiate(battery, new Vector3(-0.7543f, 0.002740f, 25.401f), someRotation);
+					battery.GetComponent<WorldObject_Battery>().batteryDialog = q2Ending;
+					print("battery got this far...");
+				}
+			}
+			else
+			{
+				if (!battery.GetComponent<WorldObject_Battery>().batteryDialog || battery.GetComponent<WorldObject_Battery>().batteryDialog == null)
+				{
+					print("battery getting set?");
 					battery.GetComponent<WorldObject_Battery>().batteryDialog = q2Ending;
 				}
 			}

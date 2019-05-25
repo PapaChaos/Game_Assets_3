@@ -16,7 +16,7 @@ MonoBehaviour:
   HasPlatforms: 0
   sourceProjectPath: ounds.fspromod_etc\GA3_Sounds\GA3_Sounds.fspro
   SourceProjectPathUnformatted: ounds.fspromod_etc\GA3_Sounds\GA3_Sounds.fspro
-  SourceBankPathUnformatted: E:\GA_3_Sounds\Build\Desktop
+  SourceBankPathUnformatted: Fmod_sounds\Build\Desktop
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -37,7 +37,7 @@ MonoBehaviour:
     Value: 0
   OverlaySettings:
   - Platform: 1
-    Value: 1
+    Value: 0
   - Platform: 2
     Value: 0
   LoggingSettings:

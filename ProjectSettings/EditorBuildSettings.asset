@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Q1.unity
     guid: e1c140ed134c722469bb7efa10c34a8a
   - enabled: 1
-    path: Assets/Scenes/MainQuestMap.unity
-    guid: 5e0d0a662a20a714d9f79edee17897a9
+    path: Assets/Scenes/Q2.unity
+    guid: be0d53bf7ecc8cc43a4a7adb5263d510
   - enabled: 1
-    path: Assets/Scenes/DanPrototype.unity
-    guid: b7da18b84dedf5747aeee51bfb085093
+    path: Assets/Scenes/Q3.unity
+    guid: 814cd07537a029d4cb2a24cba8f3eef0
+  - enabled: 1
+    path: Assets/Scenes/Q4.unity
+    guid: d063f372613e988418e6fd4e9f2691b9
+  - enabled: 1
+    path: Assets/Scenes/Q5.unity
+    guid: b67e10fe2a0efc84491cc26f75e9b4df
   - enabled: 1
     path: Assets/Scenes/TheEnd.unity
     guid: 9a7a4da60fc720741860bfbc22c455be

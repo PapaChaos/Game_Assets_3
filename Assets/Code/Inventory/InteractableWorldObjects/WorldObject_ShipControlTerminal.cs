@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class WorldObject_ShipControlTerminal : InteractableWorldObject
 {
+
+	public Camera endingCam;
+
+
     public override void Interaction()
 	{
-		SceneManager.LoadScene("TheEnd");
+		interactor.ChangeCameraView(endingCam);
+		endingCam.GetComponent<DialogSystem>().startDialog();
+	//	SceneManager.LoadScene("TheEnd");
 	}
 }

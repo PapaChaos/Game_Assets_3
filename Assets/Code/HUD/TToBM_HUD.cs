@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TToBM_HUD : MonoBehaviour
 {
-	public Text CameraName, interactionText, DateandTimeText, dialogText;
+	public Text CameraName, interactionText, DateandTimeText, dialogText, ObjectivesTexts;
 	public int[] DaysPerMonth;
 	public int Day =1, Month = 1, Year = 2459, Hour = 12, Minute = 2, Second = 1;
 	public GameObject InventoryButton, InventoryWindow, InventoryContent;
@@ -26,7 +26,7 @@ public class TToBM_HUD : MonoBehaviour
 		else
 		{
 			dialogText.enabled = true;
-			curActiveDialog.startDialog(0);
+			curActiveDialog.startDialog();
 
 		}
 
@@ -48,17 +48,33 @@ public class TToBM_HUD : MonoBehaviour
 		{
 			player.canMove = true;
 			dialogText.enabled = false;
+			CameraName.enabled = true;
+			interactionText.enabled = true;
+			DateandTimeText.enabled = true;
+			//ObjectivesTexts.enabled = true;
+			/*foreach (Transform child in ObjectivesTexts.transform)
+			{
+				//child.transform.
+			}*/
 		}
 		else if (hudtype == 1)//Inventory
 		{
-
+			dialogText.enabled = false;
+			CameraName.enabled = false;
+			interactionText.enabled = false;
+			DateandTimeText.enabled = false;
+			//ObjectivesTexts.enabled = false;
 		}
 		else if (hudtype == 2)//Dialog
 		{
 			player.canMove = false;
 			Inventory(false);
 			player.animator.SetInteger("Interaction", 0);
-			dialogText.enabled = true; 
+			dialogText.enabled = true;
+			CameraName.enabled = false;
+			interactionText.enabled = false;
+			//ObjectivesTexts.enabled = false;
+			DateandTimeText.enabled = false;
 		}
 	}
 

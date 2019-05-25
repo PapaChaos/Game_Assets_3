@@ -23,7 +23,7 @@ public class WorldObject_Cable : InteractableWorldObject
 		yield return new WaitForSeconds(1.5f);
 		interactor.ChangeCameraView(ds.GetComponent<Camera>());
 		interactor.hud.HudChange(2);
-		ds.startDialog(0);
+		ds.startDialog();
 		interactor.hud.GetComponent<QuestList>().questTexts[0].text = "Find an intercom in one of the crew quarters and overload it.";
 		intercom.playerGotCabled = true;
 		Destroy(gameObject);

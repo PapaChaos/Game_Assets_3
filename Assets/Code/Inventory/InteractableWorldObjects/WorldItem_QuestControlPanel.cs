@@ -7,6 +7,7 @@ public class WorldItem_QuestControlPanel : InteractableWorldObject
 	public GameObject lever;
 	public Vector3 leverStartPos, leverEndPos;
 	public DialogSystem ds;
+	public bool used;
 	private void Start()
 	{
 		
@@ -18,11 +19,14 @@ public class WorldItem_QuestControlPanel : InteractableWorldObject
 
 	public override void Interaction()
 	{
-		//anim 2 or 4?
-		interactor.InteractionAnimation(2, 2);
-		lever.transform.position = leverEndPos;
-		interactor.ChangeCameraView(ds.GetComponent<Camera>());
-		ds.startDialog(0);
-		interactor.hud.HudChange(2);
+		if (!used)
+		{
+			used = true;
+			interactor.InteractionAnimation(2, 2);
+			lever.transform.position = leverEndPos;
+			interactor.ChangeCameraView(ds.GetComponent<Camera>());
+			ds.startDialog();
+			interactor.hud.HudChange(2);
+		}
 	}
 }
