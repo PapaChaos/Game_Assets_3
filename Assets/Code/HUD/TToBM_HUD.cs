@@ -18,10 +18,11 @@ public class TToBM_HUD : MonoBehaviour
 	public void Start()
 
 	{
+		InvokeRepeating("updateGameTime", 0, 1.0f);
 		if (!startingDialog)
 		{
 			dialogText.enabled = false;
-			InvokeRepeating("updateGameTime", 0, 1.0f);
+			//InvokeRepeating("updateGameTime", 0, 1.0f);
 		}
 		else
 		{

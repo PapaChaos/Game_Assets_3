@@ -39,7 +39,7 @@ public class NPC_Robot : InteractableWorldObject
 				{
 					broken = true;
 					Quaternion someRotation = Quaternion.Euler(-0.7544f, 0.0027f, 25.401f);
-					Instantiate(battery, new Vector3(-0.7543f, 0.002740f, 25.401f), someRotation);
+					battery = Instantiate(battery, new Vector3(-0.7543f, 0.002740f, 25.401f), someRotation);
 					battery.GetComponent<WorldObject_Battery>().batteryDialog = q2Ending;
 					print("battery got this far...");
 				}

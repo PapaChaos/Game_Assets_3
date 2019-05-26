@@ -8,12 +8,20 @@ public class CameraChange : MonoBehaviour
 	public bool overlapActivateDialog;
 
 	public bool drawDebugBox = true;
-
+	public bool turnOffMusic = false;
+	public AudioSource audioToKill;
 	public void OnTriggerEnter(Collider other)
 	{
 		if (other.GetComponent<PlayerMovement>())
 		{
+			
 			other.GetComponent<PlayerMovement>().ChangeCameraView(Ref_camera);
+
+			if (turnOffMusic)
+			{
+				audioToKill.mute = true;
+			}
+
 			if (overlapActivateDialog)
 			{
 				Ref_camera.GetComponent<DialogSystem>().startDialog();

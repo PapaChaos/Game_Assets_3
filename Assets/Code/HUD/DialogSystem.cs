@@ -15,6 +15,9 @@ public class DialogSystem : MonoBehaviour
 	public List<bool> dialogChoices;
 	public List<DialogOptions> dialogoptions;
 	public List<DialogLine> Dialog;
+	public bool deleteNPCorObject;
+	public GameObject InitiatedObject;
+	public bool AutoStart;
 
 	public bool dialogHappening;
 	public PlayerMovement player;
@@ -49,6 +52,7 @@ public class DialogSystem : MonoBehaviour
 		public Dialog dialog;
 		public DialogChoice dialogChoices;
 
+
 		public DialogLine()
 		{
 		}
@@ -59,26 +63,35 @@ public class DialogSystem : MonoBehaviour
 		{
 			public string dialogText;
 			public AudioClip dialogAudio;
+			public bool badend;
+
 		}
 		[System.Serializable]
 		public class DialogChoice
 		{
 			public List<string> Dialogs;
 			public List<int> NextIndex;
+			public List<bool> badend;
 
-			public DialogChoice()
-			{
-			}
 		}
 	}
 	
 
 	void Start()
 	{
+		curDialog = hud.dialogText;
 		if (gameObject.GetComponents<AudioSource>().Length < 1)
 			audioSource = gameObject.AddComponent<AudioSource>();
 		else
 			audioSource = gameObject.GetComponents<AudioSource>()[0]; //pick the first found source...
+
+		if (AutoStart)
+			startDialog();
+
+		foreach (DialogLine d in Dialog)
+		{
+
+		}
 	}
 
 	public void startDialog()
@@ -144,7 +157,14 @@ public class DialogSystem : MonoBehaviour
 				if (useNewSystem)
 				{
 					curDialog.text = Dialog[dialogIndex].dialog.dialogText;
+
+					if(Dialog[dialogIndex].dialog.dialogAudio)
 					audioSource.PlayOneShot(Dialog[dialogIndex].dialog.dialogAudio);
+
+					else if (Dialog[dialogIndex].dialog.badend)
+					{
+						SceneManager.LoadScene("badend");
+					}
 				}
 				else
 				{
@@ -176,8 +196,13 @@ public class DialogSystem : MonoBehaviour
 					endDialog();
 					print("Dialog Ending");
 				}
-				else
+				else {
+					if (Dialog[dialogIndex].dialog.badend)
+					{
+						SceneManager.LoadScene("badend");
+					}
 					PlayDialogIndex(dialogIndex);
+				}
 			}
 		}
 	}
@@ -186,7 +211,10 @@ public class DialogSystem : MonoBehaviour
 	public void endDialog()
 	{
 		curDialog.text = "";
-
+		if(deleteNPCorObject && InitiatedObject)
+		{
+			Destroy(InitiatedObject);
+		}
 		//goes back to player.
 		if (endingAction == dialogEndingAction.BackToGame)
 			player.hud.HudChange(0);
@@ -251,6 +279,9 @@ public class DialogSystem : MonoBehaviour
 				dialogbutton.GetComponent<DialogButtonScript>().ds = this;
 				dialogButtons.Add(dialogbutton);
 				dialogbutton.transform.SetParent(hud.dialogText.transform);
+
+				dialogbutton.GetComponent<DialogButtonScript>().badend = Dialog[dialogIndex].dialogChoices.badend[v];
+
 				Vector3 pos = dialogbutton.transform.position = hud.dialogText.transform.position;
 				pos.y -= 40 * v;
 				dialogbutton.transform.position = pos;

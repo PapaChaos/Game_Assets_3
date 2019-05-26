@@ -21,6 +21,9 @@ public class DialogEditor : Editor
 		DialogSystem ds = (DialogSystem)target;
 		GUILayout.Label("Current Dialog Index: " + ds.dialogIndex);
 		ds.dialogButton = (Button)EditorGUILayout.ObjectField("Dialog Button:", ds.dialogButton, typeof(Button), true);
+		ds.hud = (TToBM_HUD)EditorGUILayout.ObjectField("HUD: ", ds.hud, typeof(TToBM_HUD), true);
+		ds.deleteNPCorObject = EditorGUILayout.Toggle("delete object when done: ", ds.deleteNPCorObject);
+		ds.AutoStart = EditorGUILayout.Toggle("Auto start?: ", ds.AutoStart);
 		ds.useNewSystem = EditorGUILayout.Toggle("Use new Dialog System?", ds.useNewSystem);
 		ds.endingAction = (DialogSystem.dialogEndingAction)EditorGUILayout.EnumPopup("Dialog Ending Action: ", ds.endingAction);
 
@@ -102,11 +105,13 @@ public class DialogEditor : Editor
 						}
 						GUILayout.EndHorizontal();
 						GUILayout.Label("Index: " + listcount);
+						//ds.Dialog[listcount].badend = EditorGUILayout.Toggle("Bad end choice?: ", ds.Dialog[listcount].badend);
 						ds.Dialog[listcount].dialogChoice = EditorGUILayout.Toggle("Dialog Options?", ds.Dialog[listcount].dialogChoice);
 						if (!ds.Dialog[listcount].dialogChoice)
 						{
 							ds.Dialog[listcount].dialog.dialogText = EditorGUILayout.TextField("Dialog Text:", ds.Dialog[listcount].dialog.dialogText);
 							ds.Dialog[listcount].dialog.dialogAudio = (AudioClip)EditorGUILayout.ObjectField("Audio Clip:", ds.Dialog[listcount].dialog.dialogAudio, typeof(AudioClip), true);
+							ds.Dialog[listcount].dialog.badend = EditorGUILayout.Toggle("Bad end choice?: ", ds.Dialog[listcount].dialog.badend);
 						}
 						else if (ds.Dialog[listcount].dialogChoice)
 						{
@@ -114,6 +119,7 @@ public class DialogEditor : Editor
 							{
 								ds.Dialog[listcount].dialogChoices.Dialogs.Add("");
 								ds.Dialog[listcount].dialogChoices.NextIndex.Add(9999);
+								
 							}
 
 							for (int d = 0; d < ds.Dialog[listcount].dialogChoices.Dialogs.Count(); d++)
@@ -146,6 +152,10 @@ public class DialogEditor : Editor
 								GUILayout.EndHorizontal();
 								ds.Dialog[listcount].dialogChoices.Dialogs[d] = EditorGUILayout.TextField("Dialog option text:", ds.Dialog[listcount].dialogChoices.Dialogs[d]);
 								ds.Dialog[listcount].dialogChoices.NextIndex[d] = EditorGUILayout.IntField("Index after dialog option:", ds.Dialog[listcount].dialogChoices.NextIndex[d]);
+
+								/*if (ds.Dialog[listcount].dialogChoices.badend == null)
+									ds.Dialog[listcount].dialogChoices.badend = new List<bool>();*/
+
 
 							}
 						}
